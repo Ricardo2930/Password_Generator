@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./stylus.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="body grid place-content-center h-screen bg-gray-900">
+    <main class="container bg-slate-300 p-5 grid gap-5 w-auto rounded-lg">
+      <section
+        class="password-box bg-white border-2 border-gray-400 p-4 flex justify-between rounded-full gap-3"
+      >
+        <h3 class="password-box-values text-gray-500">i3R&C=!Z#BK</h3>
+        <div class="paswword-box-copy grid place-content-center">
+          <i class="fa-regular fa-copy text-gray-500 cursor-pointer" id="copy-btn"></i>
+          <span class="copy text-gray-500 text-xs">Copied!</span>
+        </div>
+      </section>
+
+      <section class="check px-5 grid gap-2">
+        <div class="check-uppercase">
+          <input type="checkbox" id="uppercase" />
+          <span>Uppercase</span>
+        </div>
+
+        <div class="check-lowercase">
+          <input type="checkbox" id="lowercase" checked />
+          <span>Lowercase</span>
+        </div>
+
+        <div class="check-numbers">
+          <input type="checkbox" id="numbers" />
+          <span>Numbers</span>
+        </div>
+
+        <div class="check-symbols">
+          <input type="checkbox" id="symbols" />
+          <span>Symbols</span>
+        </div>
+      </section>
+
+      <section class="password-length px-5 rounded-lg">
+        <p>Password Length</p>
+        <div class="password-length flex gap-2 justify-between">
+          <input
+            class="password-length-input"
+            type="range"
+            min="6"
+            value="12"
+            max="30"
+            name=""
+            id=""
+          />
+          <p class="password-length-value bg-white p-2 rounded-lg">12</p>
+        </div>
+      </section>
+
+      <section class="button-generator grid">
+        <button
+          class="button-generator-password bg-blue-500 rounded-full p-2 text-white font-bold hover:scale-105 duration-300"
+        >
+          Generate Password
+        </button>
+      </section>
+    </main>
+  </body>
+  <script src="./app.js"></script>
+</html>
